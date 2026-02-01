@@ -2,8 +2,6 @@
 
 A modern, feature-rich web application for exploring food products and their nutritional information using the OpenFoodFacts API. Built with React and Vite, featuring a stunning dark UI with glassmorphism effects and smooth animations.
 
-![FoodExplorer](https://img.shields.io/badge/React-18.3-blue) ![Vite](https://img.shields.io/badge/Vite-7.3-purple) ![License](https://img.shields.io/badge/license-MIT-green)
-
 ## ✨ Features
 
 ### Core Functionality
@@ -255,49 +253,6 @@ Assesment/
 - Safari (latest)
 - Opera (latest)
 
-## ⚠️ Known Limitations
-
-1. **API Server**: OpenFoodFacts is maintained by a non-profit and may experience downtime. If the server is not responding, please wait and try again later.
-
-2. **Data Quality**: Some products may have incomplete information (missing images, ingredients, or nutritional values).
-
-3. **CORS**: The API supports CORS, but some network configurations may cause issues.
-
-## 🚧 Future Enhancements
-
-Potential features for future versions:
-- [ ] Infinite scroll instead of "Load More"
-- [ ] Advanced filters (allergens, labels, nutrition scores)
-- [ ] Product comparison feature
-- [ ] Favorites/Wishlist with localStorage
-- [ ] Shopping cart functionality
-- [ ] Dark/Light theme toggle
-- [ ] Multi-language support
-- [ ] Export product data to PDF/CSV
-- [ ] QR code scanner for barcode search
-- [ ] Product recommendations
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 🙏 Acknowledgments
-
-- **Open Food Facts** - For providing the comprehensive food database API
-- **Google Fonts** - For Inter and Outfit typefaces
-- **React Team** - For the amazing React framework
-- **Vite Team** - For the blazing-fast build tool
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-1. Check the console for error messages
-2. Verify your internet connection
-3. Ensure the OpenFoodFacts API is accessible
-4. Try refreshing the page
-
----
 
 **Built with ❤️ using React, Vite, and Open Food Facts API**
 
-*Discover what's inside your food!* 🍎🥗🍞
