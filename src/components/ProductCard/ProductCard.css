@@ -1,0 +1,281 @@
+.product-card {
+    position: relative;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: var(--shadow-md);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-500);
+    box-shadow:
+        0 0 0 1px var(--primary-500),
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 60px rgba(59, 130, 246, 0.2);
+}
+
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    background: var(--bg-tertiary);
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform var(--transition-slow);
+    padding: var(--spacing-md);
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: var(--text-tertiary);
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+}
+
+.product-image-placeholder.hidden {
+    display: none;
+}
+
+.product-image.placeholder-fallback {
+    opacity: 0.6;
+    filter: grayscale(20%);
+}
+
+
+.nutrition-badge {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: var(--radius-xl);
+    color: white;
+    font-weight: 700;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    animation: scaleIn 0.4s ease-out;
+    z-index: 10;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        0 8px 24px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.nutrition-badge::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-xl);
+    background: inherit;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.grade-label {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 1;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2px;
+}
+
+.grade-value {
+    font-size: 1.75rem;
+    font-family: var(--font-display);
+    line-height: 1;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.product-content {
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.product-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.product-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color var(--transition-base);
+}
+
+.product-card:hover .product-name {
+    color: var(--primary-400);
+}
+
+.product-brand {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.product-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px var(--spacing-md);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.product-category svg {
+    color: var(--primary-400);
+}
+
+.product-ingredients {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.view-details-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--bg-tertiary);
+    border: 2px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    margin-top: auto;
+    font-family: var(--font-primary);
+}
+
+.view-details-btn:hover {
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+    border-color: var(--primary-500);
+    color: white;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.view-details-btn svg {
+    transition: transform var(--transition-base);
+}
+
+.view-details-btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* Animation delays for staggered appearance */
+.product-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.product-card:nth-child(2) {
+    animation-delay: 0.05s;
+}
+
+.product-card:nth-child(3) {
+    animation-delay: 0.1s;
+}
+
+.product-card:nth-child(4) {
+    animation-delay: 0.15s;
+}
+
+.product-card:nth-child(5) {
+    animation-delay: 0.2s;
+}
+
+.product-card:nth-child(6) {
+    animation-delay: 0.25s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-image-wrapper {
+        height: 200px;
+    }
+
+    .product-content {
+        padding: var(--spacing-md);
+    }
+
+    .product-name {
+        font-size: 1rem;
+    }
+
+    .nutrition-badge {
+        width: 60px;
+        height: 60px;
+        top: var(--spacing-sm);
+        right: var(--spacing-sm);
+    }
+
+    .grade-label {
+        font-size: 0.5625rem;
+    }
+
+    .grade-value {
+        font-size: 1.5rem;
+    }
+}
